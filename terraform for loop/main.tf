@@ -87,3 +87,71 @@ resource "aws_instance" "servers" {
     Name = "env0-Server-${each.key}"
   }
 }
+
+
+#example 4 
+locals {
+  map1 = {
+    luke  = "jedi"
+    yoda  = "jedi"
+    darth = "sith"
+  },
+  map2 = {
+    quigon     = "jedi"
+    palpantine = "sith"
+    hansolo    = "chancer"
+  }
+}
+merged_map = merge(local.map1, local.map2)
+
+
+
+
+locals {
+  list1 = [
+    { key = "luke", value = "jedi" },
+    { key = "yoda", value = "jedi" }
+  ]
+
+  list2 = [
+    { key = "darth", value = "sith" },
+    { key = "palpatine", value = "sith" }
+  ]
+
+  merged_list = merge({ for elem in concat(local.list1, local.list2) : elem.key => elem })
+}
+
+
+
+#Example 5
+locals {
+  users_map = { for u in var.users : u.name => u }
+}
+
+module "iam_user_git_admin" {
+  for_each = local.users_map
+
+  source                        = "../modules/terraform-aws-iam/modules/iam-user/"
+  name                          = each.key
+  create_iam_user_login_profile = each.value.create_login_profile
+  create_iam_access_key         = each.value.create_access_key
+
+  # skip
+
+}
+
+resource "aws_iam_service_specific_credential" "codecommit" {
+  for_each = local.users_map
+
+  service_name = "codecommit.amazonaws.com"
+  user_name    = each.key
+}
+
+resource "local_sensitive_file" "user_credentials" {
+  for_each = local.users_map
+
+  file_permission = "0644"
+  filename = "./user_credentials-${each.key}.txt"
+  content = templatefile("${path.module}/template/user-credentials.tpl", {
+    iam_user_name    = coalesce(module.iam_user_git_admin[each.key].iam_user_name, "The data wasn't provided")
+    service_password = coalesce(aws_iam_service_specific_credential.codecommit[each.key].service_password, "The data wasn't provided")
