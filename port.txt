@@ -1,0 +1,31 @@
+users -- load balancer -- VM (back pool) load balancing rules
+
+80	HTTP (Hypertext Transfer Protocol)
+443	HTTPS (Hypertext Transfer Protocol Secure)
+530	RPC (Remote Procedure Call)
+21	FTP (File Transfer Protocol)
+23	Telenet
+53	DNS (Domain Name System)
+22	SSH (Secure Shell)
+25	SMTP (Simple Mail Transfer Protocol)
+194	IRC (Internet Relay Chat)
+88 Kerberos
+
+
+There are three ranges:
+
+Well-Known Ports: 0 – 1023
+
+Registered Ports: 1024 – 49151
+
+Dynamic and Private Ports: 49152 – 65535
+
+more port : https://www.geeksforgeeks.org/50-common-ports-you-should-know/
+https://www.arubanetworks.com/techdocs/AOS-S/16.10/ATMG/YC/content/common%20files/tcp-por-num-ran.htm#:~:text=There%20are%20three%20ranges%3A,and%20Private%20Ports%3A%2049152%20%E2%80%93%2065535
+
+
+
+Kafka using below port
+Kerberos (/ˈkɜːrbərɒs/) is a computer-network authentication protocol that works on the basis of tickets to allow nodes communicating over a non-secure network to prove their identity to one another in a secure manner. Its designers aimed it primarily at a client–server model, and it provides mutual authentication—both the user and the server verify each other's identity. Kerberos protocol messages are protected against eavesdropping and replay attacks.
+
+Kerberos builds on symmetric-key cryptography and requires a trusted third party, and optionally may use public-key cryptography during certain phases of authentication.[2] Kerberos uses UDP port 88 by default.
