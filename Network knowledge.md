@@ -20,7 +20,7 @@ Example web communication HTTP  Email POP3, SMTP IMAP       File transfer FTP
 open system interconnection (OSI)  a conceptual framework showing us how data move through a network
 didved into 7 layers. upper layers(host layers) lower layers ( media layers)
 7.application layer  google chrome
-6.presetntation layer  dat representation and encryption  like HTML code
+6.presetntation layer  data representation and encryption  like HTML code
 5.sesstion layer
 4.transport layer   TCP transmision control protocol (connection-oriented) UDP user datagram protocol (connection less; used for streaming or real time data.; faster than TCP)
 
@@ -30,10 +30,10 @@ didved into 7 layers. upper layers(host layers) lower layers ( media layers)
 
 
 #### TCP/IP
-application layer    FTP,HTTP...
-transport layer  TCP,UDP, ports
-internet layer   IP,ARP, ICMP for ping and testing
-network interface layer   ethernet , token ring
+4.application layer    FTP,HTTP...
+3.transport layer  TCP,UDP, ports
+2.internet layer   IP,ARP, ICMP for ping and testing
+1.network interface layer   ethernet , token ring
 
 MAC address (Media access control) (Data link OSI layer 2 local LAN comunication)
 IP address  (network layer)  (IPv4 IPv6 WAN communication)
@@ -123,3 +123,94 @@ traceroute
 netstat -aon
 net start
 nslookup google.com
+
+
+
+
+
+
+
+
+
+
+
+
+#### Management protocols
+##### Domain name system (DNS)
+Protocol that is used to resolve a domain name to its corresponding IP address.
+Use UDP port 53
+##### Dynamic host configuration protocol DHCP
+port 67,68 UDP
+Protocol that auto assigns IP address configurations to devices on a network: IP adress, Subnet mask, Default Gateway, DNA server.
+###### Network time protocla NTP
+protocol that auto sync a system's time iwth net work time server.
+TCP 123
+##### Simple network management protocol (SNMP)
+protocal that monitor and manage network devices
+port 161 TCP
+##### Light weight directory access protocol  (LDAPS)
+port 390 TCP
+##### Server message block (SMB)
+network and file sharing protocol commonly used in microsoft env.
+allow system to share their files and printers with other system.
+Port 445 TCP
+
+##### Remote communication protocols
+###### Telnet
+data is transfered in clear text so it is considere insecure. used to insecurely connect to a remote host.
+port 23 TCP
+###### Secure shell (SSH)
+securely connect to a remote host.
+encrypts data with public key infrastucture
+port 22
+##### Remote desktop protocol (RDP)
+port 3389 TCP
+allows user to remotely connect to , view and control a remote computer from a windows desktop. Built into microsoft operating system.
+
+
+#### Fil transfer protocol
+##### file transfrt protocol (FTP)
+slowly being replaced by SFTP
+allow transfer files between systems.
+port 20 for data: data transer
+port 21 for coontrol: commands
+##### Secure file transfer protocol (SFTP)
+TCP port 22
+##### Trivial file transfer protocol (TFTP)
+port 69 UDP
+a bare- bones version of FTP used for simple downloads.
+do not support authentication and directory naviation
+requires that you request the exact file and location.
+often used to transfer software images for routers and switches during upgrades.
+
+
+#### SMTP Simple mail transfer protocol
+email protocol tha is used to deliver email from an email client to a destination email server.
+can be configured to use encryption.
+TCP port 25 
+#### Post office protocol version 3 (POP 3) 
+Email protocol tha is used to retrieve emails form an email server.
+port 110
+user encryption or plain text
+#### Internet message access protocol (IMAP)
+allow users to access email on servers and either read the email on the server or download the email to the client matchine.
+Gmail use IMAP
+popular when a user accesses email from multiple different devices.
+TCP port 143
+
+#### Web browser application protocols
+##### HTTP hypertext transfer protocol
+port 80 TCP
+retrieves the content of a web page from a web server
+protocols that provides browsing services for the world wide web.
+
+##### HTTPS
+HTTP over secure socket layer or transport layer security
+port 443 TCP
+utilized public key infrastructure PKI
+
+##### IPv4 address anatomy
+network portion, host portion, subnet mask
+IP address 
+subnet mask
+default gateway: The IP addess of a network's router that allows devices on the local network to communicatte iwth othe networks.

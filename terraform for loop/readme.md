@@ -1,0 +1,1 @@
+[for s in ["this","list"]:upper(s)]
