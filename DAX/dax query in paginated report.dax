@@ -1,0 +1,27 @@
+DEFINE VAR vFromdate1=IF(PATHLENGTH(@vFromdate)=1,
+IF(@vFromdate<>"",@vFromdate,BLANK()),
+IF(PATHITEM(@vFromdate,2)<>"",PATHITEM(@vFromdate,2),BLANK()))
+
+VAR vFromdate1ALL=PATHLENGTH(@vFromdate)>1 &&
+PATHITEM(@vFromdate,1,1)<1
+
+VAR vTodate1=IF(PATHLENGTH(@vTodate)=1,
+IF(@vTodate<>"",@vTodate,BLANK()),
+IF(PATHITEM(@vTodate,2)<>"",PATHITEM(@vTodate,2),BLANK()))
+
+VAR vTodate1ALL=PATHLENGTH(@vTodate)>1 &&
+PATHITEM(@vTodate,1,1)<1
+
+
+EVALUATE SUMMARIZECOLUMNS(
+'table'[account],
+'table'[date],
+'table'[currency],
+'table'[group_label],
+RSCustomDaxFilter(@group_label,EqualToCondition,'table'[group_label],String),
+RSCustomDaxFilter(@account,EqualToCondition,'table'[account],String),
+Filter(Values('table'[date]),
+(vFromdate1ALL || 'table'[date]>=DATEVALUE(vFromdate1)+TIMEVALUE(vFromdate1)) &&
+(vTodate1ALL || 'table'[date]<=DATEVALUE(vTodate1)+TIMEVALUE(vTodate1))
+)
+)

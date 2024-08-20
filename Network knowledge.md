@@ -214,3 +214,63 @@ network portion, host portion, subnet mask
 IP address 
 subnet mask
 default gateway: The IP addess of a network's router that allows devices on the local network to communicatte iwth othe networks.
+
+
+
+
+## IP Address
+Host per network = 2^h-2
+subtract 2 because network includes a network address and broadcast address that are not available for user by network and devices
+
+### Public IP Address
+registered public IP address
+must bt used globally unique
+web servers, DNS servers, Routers
+Private IP address & Network address translation (NAT) 
+### Private IP address
+Unregisered - free for user by anyone
+cannot be used or routed on a public network
+Utilizes NAT to speak to public networks.
+
+
+192.168.100.10
+192.168.100.12-->switch--router (192.168.100.1/external 140.100.100.150) --> Internet
+192.168.100.11
+192.168.100.13
+
+127.0.0.0 is typically configured as the default loopback address on operating systems. used for diagnostics purposes to check that TCP/IP is correctly installed on a host's operating system.
+ping 127.0.0.1
+ping localhost
+ping loopback
+
+Why IPv4 is around
+subnetting CIDR
+user of provate IP address
+network address translation
+
+Why IPv6 is needed?
+security
+
+Unicast
+Multicast not board cast
+Anycast  data is delivered to the nesarest network interfaces
+##### Static
+IP manually configured
+DNS servers
+web servres
+printers
+#### dynamic
+DHCP server; dynamically configured.
+
+
+
+## Domain Name System (DNS)
+DNS provides TCP/IP name resolution services, which is the process of translating host and domain names into their correponding IP address.
+Fully qualified domain names FQDN
+Host name: www
+Domain Name: XXX.com
+Top-Level Domain: .com
+### DNS Hierarchy
+Top level domain DNS Servers (com mil edu net org)
+Second level domain DNS servers (Microsoft.com)
+Third Level Domian DNS servers (technet.Microsoft.com)
