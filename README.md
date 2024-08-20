@@ -28,3 +28,10 @@ Terraform
 Input variables   (default, type (string, number bool, list()，set(),map(),object({attr_name=type}),tuple([type,...]), any indicate any type is acceptable), descriptoin, validation, sensitive)
 output variables (description, sensitive, depends_on)
 local variables
+
+### Load Balancers
+Inbound: from internet to the load balancer to your backend VMs.
+Outbound from your backend VMs to the internet.
+To route the traffic from the load balancer to the backends, you setup load balancer rules. For example, port 80 (http) to port 8080 (application) on the VM backends
+
+Public IP Address -->azure load balancer --> VM Scale Sets --> network security groups --> autoscaling

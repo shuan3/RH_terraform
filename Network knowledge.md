@@ -103,11 +103,35 @@ Ethernet N<signaling>-X
 N:signal rate
 x: types of cable
 Examble 10GBase-T -> 10 Gbps 100 meter
+
+
+
+
+
+
+
 # Command ICMP
 ARP command: arp -a
 ping www.google.ca
 pathping
 tracert www.lexis.com
+--track traffic
+%sh
+traceroute
+
+netstat -aon
+net start
+--find out IP address
+nslookup google.com
+--update address
+ipconfig /renew
+
+
+
+
+
+
+
 
 ##### Protocols
 Compters communicate with each other iwth network protocols. 
@@ -116,13 +140,6 @@ protocols are rules governing how mathcines exchange data and enable effective c
 ports are logical constructs that bind a unique port number to a protocol process or service
 ##### Sockets
 Sockets are a combinaion of an IP addres and a port number, for example 192.168.1.1:80
-
-%sh
-traceroute
-
-netstat -aon
-net start
-nslookup google.com
 
 
 
@@ -274,3 +291,4 @@ Top-Level Domain: .com
 Top level domain DNS Servers (com mil edu net org)
 Second level domain DNS servers (Microsoft.com)
 Third Level Domian DNS servers (technet.Microsoft.com)
+cPanel
