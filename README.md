@@ -1,4 +1,5 @@
 # RH_terraformsdfaf
+https://github.com/in4it/terraform-azure-course/tree/master
 
 
 Terraform uses providers, which are shipped separately with their own verion numbering.
@@ -35,3 +36,12 @@ Outbound from your backend VMs to the internet.
 To route the traffic from the load balancer to the backends, you setup load balancer rules. For example, port 80 (http) to port 8080 (application) on the VM backends
 
 Public IP Address -->azure load balancer --> VM Scale Sets --> network security groups --> autoscaling
+
+
+### Azure database for Mysql
+Network security
+connectivity architecture
+IP firewall raules
+virtual network firewall rules
+
+Users-->azure gateway --> azure database for my sql servers
