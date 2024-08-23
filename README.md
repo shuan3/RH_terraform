@@ -45,3 +45,44 @@ IP firewall raules
 virtual network firewall rules
 
 Users-->azure gateway --> azure database for my sql servers
+
+
+
+# Azure storage
+durable and high availabilibt
+security
+accessibility
+saclability
+
+Azure blob storage: unstructured data
+Azure table storage: part of azrue cosmosDB, NOSQL data
+Azure file storage: managed file sharing SMB
+Azure queue storage: Message storage queue, HTTP
+Azure Data Lake Storage Gen2: Big data analysis
+Disk storage: Managed and unmanaged disks (VHD)
+
+Types:
+general purpose v2 Recommended
+general purpose v1 legacy
+blockblob storage for high,low,latency transaction scenarios
+files storage accounts for high performance scale aplications
+bolbstorage account legacy blob only storage
+
+
+# Application Gateway
+web traffic load balancer
+operates on the OSI layer 7
+SSL/TLS termination
+Redirecting
+Request based routing. this allows the application gateway to be used for multiple domains.
+Autoscaling(zone redundancy, static VIP ingress controller for AKS)
+
+users-->application gateway-->homespage/application
+
+Application layer -- HTTP FTP SSH  Application gateway
+Presentation layer -- HTTPS SSL JPEG ASCII..
+Session layer -- API SOCKET
+Transport layer -- TCP UDP  Traditional load balancer
+Network layer -- IP ICMP router
+Data link layer -- Ethernet Switch
+Physical layer -- Coax Fiber Hub

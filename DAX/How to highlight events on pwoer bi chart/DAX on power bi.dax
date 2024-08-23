@@ -1,0 +1,11 @@
+
+
+// Step 1 create a measure
+counts of events=VAR __CurrentDate=MAX(Dates[Date])
+VAR __EventCount=SUMX(
+    Events,
+    INT(__CurrentDate IN CALENDAR(Events[Event Started],Events[Event Ended]))
+
+) RETURN __EventCount
+
+//https://github.com/mrigankadevp/Contoso-Sales-Report

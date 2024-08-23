@@ -292,3 +292,56 @@ Top level domain DNS Servers (com mil edu net org)
 Second level domain DNS servers (Microsoft.com)
 Third Level Domian DNS servers (technet.Microsoft.com)
 cPanel
+
+
+
+
+
+
+#### Refresher on Switches
+Memorizes the MAC address.
+
+#### Routers
+between routers serial is used
+192.168.1.0/24 -->switches --> router -->router --> switches (MAC address) -->192.168.0.0/24
+
+Types
+static
+dynamic (protocol distance- vector (hop count: numbers of routers) (RIP & EIGRP), link-state (shortest-path first tree OSPF), hybrid)
+
+IGP (interior gateway protocol) udemy --> router -->internet EGP--> router IGP
+BGP: the only RGP widespread used today. The best path selection algorithm to identify best route.
+###### Route table entries
+directly connected routes
+remote network routes
+default routes
+
+
+
+
+
+
+
+
+
+
+
+
+##### Wireless frequencies
+AM Radio 10MHz
+FM Radio 100MHz
+Microwave oven 2.4GHz
+Cordless Phone 2.4GHz
+
+802.11 wireless opeartes eiher 2.4 GHz or 5 GHz
+2.4 GHz longer frequency waves, good for long distances slower data rates, fewer channels
+5 GHz shorter frequency waves, less effective for long distances, faster data rates, more channels
+
+MIMO (Multiple Input, Multiple Output)
+MU MIMO multiple user MIMO allow multiple users to communicate iwh a WAP at the same time
+
+ANT+: wireless protocol for wathc
+Bluetoth: wireless communication protocol for personal area network
+NFC near field communication: wireless communication protocol, "tap to pay"
+Infrared (IR): television remotes control
+Raddio frequency identification RFID: supply chain
