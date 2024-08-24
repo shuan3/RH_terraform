@@ -345,3 +345,64 @@ Bluetoth: wireless communication protocol for personal area network
 NFC near field communication: wireless communication protocol, "tap to pay"
 Infrared (IR): television remotes control
 Raddio frequency identification RFID: supply chain
+
+
+
+
+### WAN
+#### Circuit-switched connection
+fixed bandwidth
+
+#### Packer-Switched connection
+Share bandwidth and connection with others.
+
+#### Vittual circuit
+a mean of forwarding packets of data in such a way that it appears as if there is a dedicated physical link circuit between the source and destination.
+permanent virtual circuit (PVC)
+switched virtual circuit (SVC)
+#### Dedicated leased line
+point to point link
+dedicated physical line or a permanent virtual circuit
+
+
+### WAN Medium
+copper and fiber
+wireless (Cellular) 4G 25-30Mbps  5G 40Mbps to 1.5Gbps
+satellite  sensitive to weather, expensive   12-100Mbps   need to have a satellite dish installed
+
+
+Customer's LAN -->Router-->CSU/DSU Modem-->Demarcation Point-->smart jack-->Network service provider
+##### Demarcation Point
+The point where the ISP's network ends and the organizetion's network begins.
+The dividing line between the service provider and customer's network.
+##### Smart Jack
+a smart jack is often used with a CSU/DSU, which enables the service provider to diagnosis network issues and perform loopback tests.
+##### CSU/DSU Modem
+a wan connectivity device that connects a WAN link to a custoemr's LAN and it is a modem.
+CSU connects to the network service provider's network while DSU connects to a customer's data termination equipment (router)
+
+###### WAN broad services
+
+###### Dail-up
+56 Kbps
+use circuit switching. PSTN public switched telephone network
+###### T carrier & E carrier digital signal lines
+T carrier lines: north american, japan
+E carrier lines: European
+###### DSL
+use DSL splitter. send data digitally over telephone lines.
+computer --> router-->DSL modem-->DSL Splitter-->telecommunication company central office
+phone-->DSL splitter-->telecommunication company central office
+
+Asymmetric DSL ADSL: allocates more bandwidth to downsteam than upstream. 24Mbps-1Mbps.
+Symmetric DSL SDSL: same bandwidth. 1.544 Mbps in US and canada and 2.048 Europe
+very high bitrate DSL VDSL: Asymmetric 300 Mbps download and 100 Mbps upload. Symmetric 100 Mbps for upload and download
+
+##### Cable broadband
+computer --> router-->Cable modem-->Cable Splitter-->cable company
+TV-->Cable tuner-->Cable splitter-->cable company
+
+##### WAN protocols
+point-to-point protocol
+frame rplay
+
