@@ -406,3 +406,28 @@ TV-->Cable tuner-->Cable splitter-->cable company
 point-to-point protocol
 frame rplay
 
+
+## The CIA Triad
+Confidentiality
+Integrity
+Availability
+
+#### Leaset Privilege
+security groups
+account standardization
+account management provess and procedures.
+
+#### Intranet, Extranet and the Internet
+Intranet: an organization's internal private network that only the organization's employee can access. Used for Internal business acitivities like HR, accounting R&D...
+Extranet: a portion of an organzation's private network that onlyh business partners (partners, vendors,suppliers). Used for business partner business activities usch as ordering supplies via a business partner web portal.
+
+Intranet-->FireWall
+Extranet-->Firewall-->router-->Internet
+
+#### VPN
+Virtual private network allows you to remotely connect to a private network or the interenet in a secure encrypted manner.
+Once connected to the internet with a VPN client, a tunneling protocal is used to create a protected tunnel through the internet to the VPN server.
+Compter with VPN client--> protected VPN Tunnel-->VPN server-->www/Internet
+
+Remote access VPN
+site-to-site VPN
