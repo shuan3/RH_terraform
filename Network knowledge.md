@@ -440,3 +440,8 @@ site-to-site VPN
 Filter: filter packets based on an application or services(FTP, SMTP);
 Caching: provides caching services.
 Logging: has the ability to log user activity got auditing purposes.
+##### WEB proxy server
+Computers-->firewalls-->proxy server-->firewall-->router--internet
+Filtering: can act as a filtering services.
+Content checking. A proxy server can verify that content is valid and does not contain malicious contetn.
+Caching.
