@@ -431,3 +431,12 @@ Compter with VPN client--> protected VPN Tunnel-->VPN server-->www/Internet
 
 Remote access VPN
 site-to-site VPN
+
+
+#### Firewalls (network-based / host based)
+1.Packet filtering firewalls: IP address, TCP/UDP port, Inbound or Outbound.
+2.Circuit filtering firewalls: operates at the transport layer of the OSI model layer 4. Valid TCP sessions are allowed to pass.
+3.Application-level firewalls (proxy servers): 
+Filter: filter packets based on an application or services(FTP, SMTP);
+Caching: provides caching services.
+Logging: has the ability to log user activity got auditing purposes.
