@@ -1,7 +1,7 @@
 import requests
 import datetime
-
-auth_endpoint=""
+tenant_id=""
+auth_endpoint=f"https://login.microsoftonline.com/{tenant_id}/oauth2/v2.0/token"
 client_id=""
 client_secret=""
 list={}
@@ -15,7 +15,7 @@ class GetTokenInfo:
         token_response=requests.post(auth_endpoint,headers=headers,data=payload,verify=False)
         token_response.raise_for_status()
         return token_response['access_token']
-    def GetTokenInfo(self,token_name,vaultBaseurl,auth_endpoint):
+    def GetTokenInfo(self,token_name,vaultBaseurl,client_id,client_secret,auth_endpoint):
         token=self.getMicrosoftToken(self,client_id,client_secret,auth_endpoint)
         headers={
             'Authorization':f'Bearer {token}'
@@ -28,3 +28,6 @@ class GetTokenInfo:
         print(f'Token for {token_name} is ',result['value'])
         print(f'Token for {token_name} is ',datetime.datetime.fromtimestamp(result['attribute']['created']))
         print(f'Token for {token_name} is ',datetime.datetime.fromtimestamp(result['attribute']['exp']))
+
+for name, url in list.items():
+    GetTokenInfo().GetTokenInfo(name,url,client_id,client_secret,auth_endpoint)
