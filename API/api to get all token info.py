@@ -4,7 +4,7 @@ tenant_id=""
 auth_endpoint=f"https://login.microsoftonline.com/{tenant_id}/oauth2/v2.0/token"
 client_id=""
 client_secret=""
-list={}
+list={"secret_name":"keyvault_url or keyvault name"}
 
 class GetTokenInfo:
     def getMicrosoftToken(self,client_id,client_secret,auth_endpoint):
